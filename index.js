@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const port =   5000
 const app = express();
 app.use(express.json());
@@ -6,8 +7,15 @@ const parkings = require('./parkings.json');
 app.get('/', (req,res) => {   
     
     
-  res.send("Hello Devops")
+  res.sendFile(path.join(__dirname+'/index.html'));
 
+});
+app.get('/add',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
+});
+
+app.get('/update',function(req,res){
+  res.sendFile(path.join(__dirname+'/index.html'));
 });
 app.get('/parkings', (req,res) => {   
     

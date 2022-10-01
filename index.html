@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Express HTML</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div style="margin:100px;">
+   
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">Express HTML</a>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/add">addProduit</a>
+      </li>
+      <li>
+        <a href="/update">Update</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="jumbotron"  style="padding:40px;">
+        <form action="/add" method="POST">
+            <fieldset>
+              <h3>Add new Produit</h3>
+              <label>Employee ID</label>
+              <input type ="text" id = 'empID' name="name" required>
+              <br><br>
+              <label>Name</label>
+              <input type="text" id = "name" name="city" required>
+              <br><br>
+              <button type ="reset">Reset</button>
+              <button type ="submit">Submit</button>
+            </fieldset>
+          </form>
+    </div>
+  </div>
+</body>
+</html>
