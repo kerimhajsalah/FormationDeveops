@@ -1,7 +1,14 @@
 const express = require('express');
+const port =   5000
 const app = express();
 app.use(express.json());
-const parkings = require('./parkings.json')
+const parkings = require('./parkings.json');
+app.get('/', (req,res) => {   
+    
+    
+  res.send("Hello Devops")
+
+});
 app.get('/parkings', (req,res) => {   
     
     
@@ -18,7 +25,7 @@ app.put('/parkings/:id', (req,res) => {
             
             })
 
-            
+
 app.get('/parkings/:id', (req,res) => {  
       const id = parseInt(req.params.id)   
        const parking = parkings.find(parking => parking.id === id)  
@@ -30,5 +37,5 @@ app.delete('/parkings/:id', (req,res) => {
        let parking = parkings.find(parking => parking.id === id)  
          parkings.splice(parkings.indexOf(parking),1)   
           res.status(200).json(parkings)})
-app.listen(8080, () => {    console.log("Serveur à l'écoute")})
+app.listen(port, () => {    console.log(`Serveur à l'écoute",${port}`)})
  
